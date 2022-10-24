@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Cupcakes {% endblock %}
+
+{% block content %}
+<h1>Cupcakes</h1>
+
+<ul>
+{% for cupcake in cupcakes %}
+    <li>{{cupcake.flavor}}<button class="delete-todo" data-id="{{cupcake.id}}">X</button></li>
+{% endfor %}
+</ul>
+
+{% endblock %}

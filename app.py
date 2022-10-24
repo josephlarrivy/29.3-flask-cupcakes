@@ -23,7 +23,8 @@ connect_db(app)
 
 @app.route('/')
 def home():
-    return render_template('/test.html')
+    cupcakes = Cupcake.query.all()
+    return render_template('/index.html', cupcakes=cupcakes)
 
 @app.route('/api/cupcakes', methods=['GET'])
 def list_all_cupcakes():
