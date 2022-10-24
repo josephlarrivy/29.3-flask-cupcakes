@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} test {% endblock %}
+
+{% block content %}
+<h1>Test</h1>
+
+<ul>
+{% for cupcake in cupcakes %}
+    <li>{{cupcake.flavor}}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
